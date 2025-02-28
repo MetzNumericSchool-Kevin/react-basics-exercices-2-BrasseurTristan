@@ -1,20 +1,21 @@
 import "./App.css";
-
+import { BienvenueAventurier } from "./components/exercice1/BienvenueAventurier";
+import { Inventoria } from "./components/exercice2/Inventoria";
+import { Section } from "./components/Section";
 function App() {
   return (
     <div className="container p-5 mb-4 bg-body-tertiary rounded-3">
-      <section id="exercice1" className="my-5">
-        <h1>Boutique d'Archibald le Sorcier (bis repetita) 🧙‍♂️</h1>
-        <p>
-          Bienvenue Aventurier, ici vous pouvez acheter diverses potions
-          magiques pour vos aventures !
-        </p>
-      </section>
+      <Section id="exercice1" className="my-5">
+        <BienvenueAventurier title="Boutique d'Archibald le Sorcier 🧙‍♂️">
+          <p>
+            Bienvenue <b>Aventurier</b>, ici vous pouvez acheter diverses
+            <u>potions magiques</u> pour vos aventures !
+          </p>
+        </BienvenueAventurier>
+      </Section>
 
-      <section id="exercice2" className="my-5">
-        <h2>Inventoria</h2>
-
-        <button className="btn btn-primary">Ouvrir Inventoria</button>
+      <Section id="exercice2" className="my-5">
+        <Inventoria />
 
         <div className="row mt-5">
           <ul className="list-group list-group-horizontal flex-wrap">
@@ -23,7 +24,8 @@ function App() {
             </li>
           </ul>
         </div>
-      </section>
+
+      </Section>
 
       <section id="exercice3" className="my-5">
         <h2 className="mb-5">Boutique de potion</h2>

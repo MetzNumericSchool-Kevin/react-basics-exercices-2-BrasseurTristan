@@ -64,8 +64,8 @@ Dans `App.tsx` :
 
 ```tsx
 <Section id="exercice1">
-  <h1>Boutique d'Archibald le Sorcier 🧙‍♂️</h1>
   <BienvenueAventurier title="Boutique d'Archibald le Sorcier 🧙‍♂️">
+    <h1>Boutique d'Archibald le Sorcier 🧙‍♂️</h1>
     <p>
       Bienvenue <b>Aventurier</b>, ici vous pouvez acheter diverses
       <u>potions magiques</u> pour vos aventures !
