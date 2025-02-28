@@ -1,8 +1,16 @@
+import { useState } from "react";
 import "./App.css";
 import { BienvenueAventurier } from "./components/exercice1/BienvenueAventurier";
 import { Inventoria } from "./components/exercice2/Inventoria";
+import { ButtonInventoria } from "./components/exercice2/Button";
 import { Section } from "./components/Section";
+import potionsList from "./data/potion";
 function App() {
+
+  const [isInventoryActive, setInventoryActive] = useState(true);
+  console.log(isInventoryActive);
+
+
   return (
     <div className="container p-5 mb-4 bg-body-tertiary rounded-3">
       <Section id="exercice1" className="my-5">
@@ -15,16 +23,9 @@ function App() {
       </Section>
 
       <Section id="exercice2" className="my-5">
-        <Inventoria />
-
-        <div className="row mt-5">
-          <ul className="list-group list-group-horizontal flex-wrap">
-            <li className="list-group-item list-group-item-info">
-              Inventoria est pour le moment vide ⛺
-            </li>
-          </ul>
-        </div>
-
+        <h2>Inventoria</h2>
+        <ButtonInventoria onShow={() => { setInventoryActive(!isInventoryActive) }} textBtn={isInventoryActive ? "Fermer Inventoria" : "Ouvrir Inventoria"} />
+        {isInventoryActive ? <Inventoria /> : ""}
       </Section>
 
       <section id="exercice3" className="my-5">

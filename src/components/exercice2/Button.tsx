@@ -1,9 +1,7 @@
-import { useState } from "react";
-export function Button() {
 
-    const [changeState, setChangeState] = useState(false);
-    console.log(changeState);
+export function ButtonInventoria({ onShow, textBtn }) {
+
     return (
-        <button className="btn btn-primary" onClick={() => { setChangeState(!changeState) }}> {changeState === true ? "Fermer Inventoria" : "Ouvrir Inventoria"}</button>
+        <button className="btn btn-primary" onClick={onShow} > {textBtn}</ button>
     )
 }
